@@ -14,7 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{-- {{ __('You are logged in!') }} --}}
+                    Ora sei loggato nell'admin {{ Auth::user()->name }}!
                 </div>
             </div>
         </div>
