@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title', 50);
             $table->string('slug', 60);
             $table->text('content');
-            $table->string('image', 100);
+            $table->string('image');
             $table->tinyInteger('reading_time');
             $table->string('author', 30);
             $table->string('category', 20);
