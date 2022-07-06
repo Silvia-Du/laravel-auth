@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="col-6 post">
-            <img src="{{ $post->image }}" alt="{{ $post->title }}">
+            <img class="img-fluid" src="{{ $post->image }}" alt="{{ $post->title }}">
         </div>
         <div class="col-6">
             <p>#ID {{ $post->id }}</p>

@@ -7,6 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+
+    protected $fillable =[
+        'title',
+        'slug',
+        'content',
+        'image',
+        'reading_time',
+        'author',
+        'category'
+    ];
+
+
+
     public static function slugGenerator($title){
 
         $slug = Str::slug($title, '-');
