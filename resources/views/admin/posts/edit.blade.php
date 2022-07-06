@@ -24,9 +24,9 @@
           <input type="text" value="{{ $post->title }}"
           class="form-control @error('title') is-invalid @enderror"
           id="title" name="title" >
-
+          <p id="error_title"></p>
           @error('title')
-            <p>{{ $message }}</p>
+            <p id="error_title" >{{ $message }}</p>
           @enderror
         </div>
 
