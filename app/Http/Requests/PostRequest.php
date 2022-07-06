@@ -59,7 +59,6 @@ class PostRequest extends FormRequest
             'category.min'=> 'Devi iserire almeno :min caratteri',
             'category.max'=> 'Non superare i :max caratteri',
 
-
         ];
     }
 }

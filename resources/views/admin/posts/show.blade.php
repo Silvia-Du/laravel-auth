@@ -21,7 +21,7 @@
     </div>
     <div class="row mt-5">
         <a type="button" class="btn btn-info" href="{{ route('admin.posts.index') }}">Back to list</a>
-        <a type="button" class="btn btn-warning mx-4" href="">Edit</a>
+        <a type="button" class="btn btn-warning mx-4" href="{{ route('admin.posts.edit', $post) }}">Edit</a>
     </div>
 
 

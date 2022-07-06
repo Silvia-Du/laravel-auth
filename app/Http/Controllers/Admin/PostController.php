@@ -71,7 +71,11 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        if($post){
+            return view('admin.posts.edit', compact('post'));
+        }
+        abort(404, 'Post non trovato nell\'elenco');
     }
 
     /**
@@ -81,9 +85,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(PostRequest $request, Post $post)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Post::slugGenerator($data['title']);
+        $post->update($data);
+        return redirect()->route('admin.posts.show', $post);
     }
 
     /**
