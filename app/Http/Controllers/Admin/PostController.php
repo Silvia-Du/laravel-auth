@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('id', 'desc')->get();
+        $posts = Post::orderBy('id', 'desc')->paginate(8);
         return view('admin.posts.index', compact('posts'));
     }
 
@@ -48,7 +48,11 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        if($post){
+            return view('admin.posts.show', compact('post'));
+        }
+        abort(404, 'Post non trovato nell\'elenco');
     }
 
     /**

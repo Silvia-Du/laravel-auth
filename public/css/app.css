@@ -1,5 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.post {
+  border-radius: 5px;
+  border-style: dashed;
+}
+
+.debug {
+  background-color: rgba(95, 158, 160, 0.568);
+}
+
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

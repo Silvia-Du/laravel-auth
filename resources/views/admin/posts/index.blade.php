@@ -25,7 +25,7 @@
                 <td>{{ $post->author }}</td>
                 <td>{{ $post->category }}</td>
                 <td>
-                    <a type="button" class="btn btn-info" href="">View more</a>
+                    <a type="button" class="btn btn-info" href="{{ route('admin.posts.show', $post) }}">View more</a>
                     <a type="button" class="btn btn-light" href="">edit</a>
                     <form class="d-inline" action="" method="POST">
                         @csrf
@@ -38,5 +38,6 @@
 
         </tbody>
       </table>
+      {{ $posts->links() }}
 </div>
 @endsection
