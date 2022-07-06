@@ -31,6 +31,9 @@
                 <a class="navbar-brand" href="{{ route('admin.posts.index') }}">
                     Link area riservata
                 </a>
+                <a class="navbar-brand" href="{{ route('admin.posts.create') }}">
+                    Crea un nuovo Post
+                </a>
                 @endauth
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

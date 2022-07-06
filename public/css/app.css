@@ -9,6 +9,12 @@
   background-color: rgba(95, 158, 160, 0.568);
 }
 
+.create p {
+  color: red;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
 /*!
  * Bootstrap v4.6.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
