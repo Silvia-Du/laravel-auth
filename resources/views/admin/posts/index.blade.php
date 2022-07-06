@@ -4,6 +4,12 @@
 <div class="container">
     <h1 class="my-5">Tutti i tuoi post</h1>
 
+    @if (session('prodotto cancellato'))
+    <div class="debug p-3 rounded-3">
+        <p>{{ session('prodotto cancellato') }}</p>
+    </div>
+    @endif
+
     <table class="table">
         <thead class="table-light">
           <tr>
@@ -27,11 +33,13 @@
                 <td>
                     <a type="button" class="btn btn-info" href="{{ route('admin.posts.show', $post) }}">View more</a>
                     <a type="button" class="btn btn-light" href="{{ route('admin.posts.edit', $post) }}">edit</a>
-                    <form class="d-inline" action="" method="POST">
+                    <form
+                    class="d-inline" action="{{ route('admin.posts.destroy', $post) }}" method="POST" onsubmit="return confirm('Confermi l\'eliminazione di{{ $post->title }}?')">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-dark">Delete</button>
                     </form>
+
                 </td>
             </tr>
         @endforeach
